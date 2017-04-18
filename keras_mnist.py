@@ -42,7 +42,7 @@ print(X_test.shape[0], 'test samples')
 print(Y_train.shape, Y_test.shape)
 
 model = Sequential()
-model.add(Dropout(0.2, input_shape=(784,)))
+model.add(Dropout(0.2, input_shape = (784,)))
 model.add(Dense(800))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
@@ -54,15 +54,15 @@ model.add(Activation('softmax'))
 
 model.summary()
 
-model.compile(loss='categorical_crossentropy',
-              optimizer=Adam(),
-              metrics=['accuracy'])
+model.compile(loss = 'categorical_crossentropy',
+              optimizer = Adam(),
+              metrics = ['accuracy'])
 
 start_time = time.time()
 history = model.fit(X_train, Y_train,
-                    batch_size=500, nb_epoch=200,
-                    verbose=1, validation_data=(X_val, Y_val)) 
+                    batch_size = 500, epochs = 200,
+                    verbose = 1, validation_data = (X_val, Y_val)) 
 print("Total training time: %fs" % (time.time() - start_time))
-score = model.evaluate(X_test, Y_test, verbose=0)
+score = model.evaluate(X_test, Y_test, verbose = 0)
 print('Test score:', score[0])
 print('Test accuracy:', score[1])
