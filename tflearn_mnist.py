@@ -58,6 +58,7 @@ model.fit({'input': X_train}, {'target': Y_train}, n_epoch = 200, validation_set
 show_metric = True, batch_size = 500, shuffle = True, snapshot_epoch = True, run_id = 'TFLearn_Arcyfelix')
 
 print("Total training time: %fs" % (time.time() - start_time))
+print("Average time for an epoch: %fs" % ((time.time() - start_time) / 200))
 
 score = model.evaluate(X_test, Y_test)
 print('Test score:', score)

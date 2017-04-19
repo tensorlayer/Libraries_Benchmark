@@ -63,6 +63,7 @@ history = model.fit(X_train, Y_train,
                     batch_size = 500, epochs = 200,
                     verbose = 1, validation_data = (X_val, Y_val)) 
 print("Total training time: %fs" % (time.time() - start_time))
+print("Average time for an epoch: %fs" % ((time.time() - start_time) / 200))
 score = model.evaluate(X_test, Y_test, verbose = 0)
 print('Test score:', score[0])
 print('Test accuracy:', score[1])
