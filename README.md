@@ -39,12 +39,12 @@ Num of epochs: 200
 Batch size: 500
 FC-x = Fully Connected / Dense with Relu activation with x number of neurons
 DP = Dropout
-Architecture  / Library                                           |  Keras       | TFLearn  | TensorLayer  |
-------------------------------------------------------------------|--------------|----------|--------------------|
-INPUT + **FC-800** + DP + **FC-800** + DP + OUTPUT                | **173.825s** | 337.312s | To be tested       |
-INPUT + **FC-2000** + DP + **FC-2000** + DP + OUTPUT              | **377.443s** | 477.034s | To be tested       |
-INPUT + **FC-4000** + DP + **FC-4000** + DP + OUTPUT              |1007.613s | **872.662s** | To be tested       |
-INPUT + **FC-4000** + DP + **FC-4000** + **FC-4000** + DP + OUTPUT    |1715.068s |**1313.363s** | To be tested    |
+Architecture  / Library | Keras | TFLearn  | TensorLayer  |
+---|---|---|---|
+INPUT + **FC-800** + DP + **FC-800** + DP + OUTPUT| **173.825s** |337.312s|To be tested|
+INPUT + **FC-2000** + DP + **FC-2000** + DP + OUTPUT | **377.443s** | 477.034s | To be tested |
+INPUT + **FC-4000** + DP + **FC-4000** + DP + OUTPUT | 1007.613s|**872.662s**| To be tested |
+INPUT + **FC-4000** + DP + **FC-4000** + **FC-4000** + DP + OUTPUT|1715.068s|**1313.363s** |To be tested|
 
 ### Speed of CNN
 Num of epochs: 20
